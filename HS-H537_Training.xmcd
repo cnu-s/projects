@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<worksheet version="3.0.3" xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:u="http://schemas.mathsoft.com/units10" xmlns:p="http://schemas.mathsoft.com/provenance10">
+  <pointReleaseData />
+  <metadata>
+    <generator>Mathcad Professional 14.1</generator>
+    <userData>
+      <title>HS-H537 Pipe Support Training Calculation</title>
+      <description>Training worksheet based on the supplied PTB and reference calculation excerpts.</description>
+      <author>Trainee</author>
+      <company>Training Submission</company>
+      <keywords />
+      <revisedBy>Trainee</revisedBy>
+    </userData>
+    <identityInfo>
+      <revision>1</revision>
+      <documentID>13072090-E40E-47B4-9C52-9846879E1E32</documentID>
+      <versionID>F17A19A8-5CDE-4279-B2A7-CF10D0E737EC</versionID>
+      <parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
+      <branchID>00000000-0000-0000-0000-000000000000</branchID>
+    </identityInfo>
+  </metadata>
+  <settings>
+    <presentation>
+      <textRendering>
+        <textStyles>
+          <textStyle name="Normal">
+            <blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+          <textStyle name="Heading 1">
+            <blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Arial" font-charset="0" font-size="14" font-weight="bold" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+          <textStyle name="Heading 2">
+            <blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Arial" font-charset="0" font-size="12" font-weight="bold" font-style="italic" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+          <textStyle name="Heading 3">
+            <blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Arial" font-charset="0" font-size="12" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+          <textStyle name="Paragraph">
+            <blockAttr margin-left="0" margin-right="0" text-indent="21" text-align="left" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+          <textStyle name="List">
+            <blockAttr margin-left="14.25" margin-right="0" text-indent="-14.25" text-align="left" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+          <textStyle name="Indent">
+            <blockAttr margin-left="108" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+          <textStyle name="Title">
+            <blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="center" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Times New Roman" font-charset="0" font-size="24" font-weight="bold" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+          <textStyle name="Subtitle" base-style="Title">
+            <blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="center" list-style-type="inherit" tabs="inherit" />
+            <inlineAttr font-family="Times New Roman" font-charset="0" font-size="18" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+          </textStyle>
+        </textStyles>
+      </textRendering>
+      <mathRendering equation-color="#000">
+        <operators multiplication="narrow-dot" derivative="derivative" literal-subscript="large" definition="colon-equal" global-definition="triple-equal" local-definition="left-arrow" equality="bold-equal" symbolic-evaluation="right-arrow" />
+        <mathStyles>
+          <mathStyle name="Variables" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+          <mathStyle name="Constants" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+          <mathStyle name="User 1" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+          <mathStyle name="User 2" font-family="Courier New" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+          <mathStyle name="User 3" font-family="Arial" font-charset="0" font-size="10" font-weight="bold" font-style="normal" underline="false" />
+          <mathStyle name="User 4" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="italic" underline="false" />
+          <mathStyle name="User 5" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+          <mathStyle name="User 6" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+          <mathStyle name="User 7" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+          <mathStyle name="Math Text Font" font-family="Times New Roman" font-charset="0" font-size="14" font-weight="normal" font-style="normal" underline="false" />
+        </mathStyles>
+        <dimensionNames mass="mass" length="length" time="time" current="current" thermodynamic-temperature="temperature" luminous-intensity="luminosity" amount-of-substance="substance" display="false" />
+        <symbolics derivation-steps-style="vertical-insert" show-comments="false" evaluate-in-place="false" />
+        <results numeric-only="true">
+          <general precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i" exponential-threshold="3" />
+          <matrix display-style="auto" expand-nested-arrays="false" />
+          <unit format-units="true" simplify-units="true" fractional-unit-exponent="false" />
+        </results>
+      </mathRendering>
+      <pageModel show-page-frame="false" show-header-frame="false" show-footer-frame="false" header-footer-start-page="1" paper-code="1" orientation="portrait" print-single-page-width="false" page-width="612" page-height="792">
+        <margins left="86.4" right="86.4" top="86.4" bottom="86.4" />
+        <header use-full-page-width="false" />
+        <footer use-full-page-width="false" />
+      </pageModel>
+      <colorModel background-color="#fff" default-highlight-color="#ffff80" />
+      <language math="en" UI="en" />
+    </presentation>
+    <calculation>
+      <builtInVariables array-origin="0" convergence-tolerance="0.001" constraint-tolerance="0.001" random-seed="1" prn-precision="4" prn-col-width="8" />
+      <calculationBehavior automatic-recalculation="true" matrix-strict-singularity-check="false" optimize-expressions="false" exact-boolean="true" strings-use-origin="false" zero-over-zero="error">
+        <compatibility multiple-assignment="MC12" local-assignment="MC11" />
+      </calculationBehavior>
+      <units>
+        <currentUnitSystem name="si" customized="false" />
+      </units>
+    </calculation>
+    <editor view-annotations="false" view-regions="false">
+      <ruler is-visible="false" ruler-unit="in" />
+      <plotTemplate>
+        <polar item-idref="1" />
+        <xy item-idref="2" />
+      </plotTemplate>
+      <grid granularity-x="6" granularity-y="6" />
+    </editor>
+    <fileFormat image-type="image/png" image-quality="75" save-numeric-results="true" exclude-large-results="true" save-text-images="false" screen-dpi="96" />
+    <miscellaneous>
+      <handbook handbook-region-tag-ub="187" can-delete-original-handbook-regions="true" can-delete-user-regions="true" can-print="true" can-copy="true" can-save="true" file-permission-mask="4294967295" />
+    </miscellaneous>
+  </settings>
+  <regions>
+    <ws:region region-id="1" left="36" top="24" width="540" height="25" align-x="36" align-y="49" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Title" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Training Calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="2" left="36" top="52" width="540" height="22" align-x="36" align-y="74" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Subtitle" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HS-H537 Pipe Support</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="3" left="36" top="77" width="540" height="14" align-x="36" align-y="91" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Document information    |    Details</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="4" left="36" top="94" width="540" height="14" align-x="36" align-y="108" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Project    |    McGuire Unit 2</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="5" left="36" top="111" width="540" height="14" align-x="36" align-y="125" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Support    |    2-MCT-HS-H537</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="6" left="36" top="128" width="540" height="14" align-x="36" align-y="142" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Support drawing    |    2-MCT-HS-H537, Revision 1A</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="7" left="36" top="145" width="540" height="14" align-x="36" align-y="159" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Training task    |    Pipe support calculation using revised 3,100 lb load</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="8" left="36" top="162" width="540" height="14" align-x="36" align-y="176" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Status    |    Training submission — not for design release or field use</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="9" left="36" top="179" width="540" height="28" align-x="36" align-y="207" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Calculation basis    |    PTB and reference calculation MCC-1206.12-40-2102, Client Revision 3</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="10" left="36" top="210" width="540" height="19" align-x="36" align-y="229" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Heading 3" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Training-use notice: This document summarizes the checks visible in the supplied reference calculation. It is not an independently validated design calculation, does not replace the controlled calculation or its appendices, and is not approved for construction or field use. The complete support load path has not been verified from the supplied excerpts.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="11" left="36" top="232" width="540" height="22" align-x="36" align-y="254" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Subtitle" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">1. Purpose and scope</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="12" left="36" top="257" width="540" height="56" align-x="36" align-y="313" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">The purpose of this training exercise is to review the HS-H537 support against the revised vertical design load of 3,100 lb (3.1 kip) specified in the Pre-Task Brief (PTB). The review summarizes the pipe-support assembly, HSS cantilever bending, and HSS-to-W8 weld checks reported in the reference calculation.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="13" left="36" top="316" width="540" height="70" align-x="36" align-y="386" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">This submission is limited to the information provided in the PTB, the Revision 1A support drawing, and the supplied excerpts from the reference calculation. The PTB identifies this as a training exercise, allocates 24 hours, specifies no PE stamp, and notes that the preparer is not qualified for the task. Required training, qualified review, and procedure/document checks remain applicable.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="14" left="36" top="389" width="540" height="22" align-x="36" align-y="411" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Subtitle" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">2. References</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="15" left="36" top="414" width="540" height="14" align-x="36" align-y="428" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">1. Pre-Task Brief, Quality Form 517-GU-001, Revision 26-06, pages 1–2 and Part C.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="16" left="36" top="431" width="540" height="14" align-x="36" align-y="445" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">2. Support drawing 2-MCT-HS-H537, Revision 1A, sheet 1 of 1.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="17" left="36" top="448" width="540" height="28" align-x="36" align-y="476" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">3. Calculation Sheet MCC-1206.12-40-2102, Client Revision 3, Support/Restraint Calculation for Math Model 2HSC, S/R 2-MCT-HS-H537 (EC 422276), supplied excerpts.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="18" left="36" top="479" width="540" height="42" align-x="36" align-y="521" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">4. Applicable documents identified by the PTB/reference calculation: AD-EG-ALL-1117, AWI-4-23, MCS-1144, MCS-1196, MCS-1206, MCM 1206.00-1059.001, AISC, and the cited component catalogs.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="19" left="36" top="524" width="540" height="28" align-x="36" align-y="552" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">The controlled revisions and applicability of these documents must be confirmed before using the results for engineering release.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="20" left="36" top="555" width="540" height="22" align-x="36" align-y="577" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Subtitle" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">3. Design basis and input data</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="21" left="36" top="580" width="540" height="14" align-x="36" align-y="594" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Parameter    |    Value / description    |    Source</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="22" left="36" top="597" width="540" height="28" align-x="36" align-y="625" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Revised vertical support load, P    |    3,100 lb = 3.1 kip    |    PTB; reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="23" left="36" top="628" width="540" height="14" align-x="36" align-y="642" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Existing hot vertical load    |    2,325 lb    |    Support drawing</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="24" left="36" top="645" width="540" height="14" align-x="36" align-y="659" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Existing cold vertical load    |    1,739 lb    |    Support drawing</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="25" left="36" top="662" width="540" height="14" align-x="36" align-y="676" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Main support column    |    W8×24, A36 per drawing    |    Support drawing</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="26" left="36" top="679" width="540" height="28" align-x="36" align-y="707" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Cantilever member    |    HSS 4×4×1/2 in, ASTM A500 Grade B    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="27" left="36" top="710" width="540" height="14" align-x="36" align-y="724" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS modulus of elasticity, E    |    29,000 ksi    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="28" left="36" top="727" width="540" height="14" align-x="36" align-y="741" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS yield strength, Fy    |    46 ksi    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="29" left="36" top="744" width="540" height="14" align-x="36" align-y="758" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS section modulus, S    |    5.97 in³    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="30" left="36" top="761" width="540" height="14" align-x="36" align-y="775" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS moment of inertia, I    |    11.9 in⁴    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="31" left="36" top="778" width="540" height="14" align-x="36" align-y="792" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS area, A    |    6.02 in²    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="32" left="36" top="795" width="540" height="14" align-x="36" align-y="809" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS design wall thickness    |    0.465 in    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="33" left="36" top="812" width="540" height="28" align-x="36" align-y="840" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Load lever arm, L    |    14 in from W8×24 column centerline to pipe centerline    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="34" left="36" top="843" width="540" height="14" align-x="36" align-y="857" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Pipe clamp    |    Fig. 295N double-bolt pipe clamp    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="35" left="36" top="860" width="540" height="28" align-x="36" align-y="888" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Hanger components    |    Fig. 290-LN eye nut; Fig. 140N threaded rod; Fig. 299N clevis; Fig. 55N welding lug    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="36" left="36" top="891" width="540" height="28" align-x="36" align-y="919" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS-to-W8 weld    |    1/4 in all-around fillet weld; E70XX electrode    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="37" left="36" top="922" width="540" height="14" align-x="36" align-y="936" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">W8×24 flange thickness, t    |    0.40 in    |    Reference calculation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="38" left="36" top="939" width="540" height="28" align-x="36" align-y="967" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Baseplate/anchors shown on drawing    |    Four 1/2 in Hilti KB-TZ2 anchors; 2-1/2 in nominal embedment    |    Support drawing</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="39" left="36" top="970" width="540" height="19" align-x="36" align-y="989" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Heading 1" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">3.1 Load interpretation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="40" left="36" top="992" width="540" height="56" align-x="36" align-y="1048" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">For this review, 3,100 lb is treated as the total revised vertical support load, not as an additional load applied on top of the existing drawing loads. The reference calculation uses a 3.1 kip vertical force at a 14 in lever arm for the HSS cantilever check.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="41" left="36" top="1051" width="540" height="42" align-x="36" align-y="1093" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">The supplied excerpts do not show other support reaction components or load combinations. Confirm the applicable piping reactions and governing load combinations against the current controlled procedures and piping analysis.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="42" left="36" top="1096" width="540" height="22" align-x="36" align-y="1118" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Subtitle" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">4. Calculation and evaluation</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="43" left="36" top="1121" width="540" height="19" align-x="36" align-y="1140" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Heading 1" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">4.1 Revised load comparison</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="44" left="36" top="1143" width="540" height="14" align-x="36" align-y="1157" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Increase over the drawing hot load:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="45" left="36" top="1160" width="540" height="14" align-x="36" align-y="1174" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">3,100 − 2,325 = 775 lb</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="46" left="36" top="1177" width="540" height="14" align-x="36" align-y="1191" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">3,100 / 2,325 = 1.333 → 33.3% above the hot load</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="47" left="36" top="1194" width="540" height="14" align-x="36" align-y="1208" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Increase over the drawing cold load:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="48" left="36" top="1211" width="540" height="14" align-x="36" align-y="1225" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">3,100 − 1,739 = 1,361 lb</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="49" left="36" top="1228" width="540" height="14" align-x="36" align-y="1242" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">3,100 / 1,739 = 1.782 → 78.2% above the cold load</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="50" left="36" top="1245" width="540" height="19" align-x="36" align-y="1264" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Heading 1" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">4.2 Pipe-support assembly</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="51" left="36" top="1267" width="540" height="28" align-x="36" align-y="1295" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">The reference calculation compares the 3,100 lb applied load to catalog allowable vertical loads:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="52" left="36" top="1298" width="540" height="14" align-x="36" align-y="1312" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Component    |    Allowable load (lb)    |    Interaction ratio, P / allowable</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="53" left="36" top="1315" width="540" height="14" align-x="36" align-y="1329" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fig. 295N double-bolt pipe clamp    |    3,240    |    3,100 / 3,240 = 0.957</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="54" left="36" top="1332" width="540" height="14" align-x="36" align-y="1346" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fig. 290-LN weldless eye nut    |    3,770    |    3,100 / 3,770 = 0.822</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="55" left="36" top="1349" width="540" height="14" align-x="36" align-y="1363" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fig. 140N threaded rod    |    3,770    |    3,100 / 3,770 = 0.822</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="56" left="36" top="1366" width="540" height="14" align-x="36" align-y="1380" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fig. 299N forged steel clevis    |    3,770    |    3,100 / 3,770 = 0.822</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="57" left="36" top="1383" width="540" height="14" align-x="36" align-y="1397" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fig. 55N welding lug    |    3,770    |    3,100 / 3,770 = 0.822</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="58" left="36" top="1400" width="540" height="14" align-x="36" align-y="1414" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">The clamp governs:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="59" left="36" top="1417" width="540" height="14" align-x="36" align-y="1431" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">IRassembly = 3,100 / min(3,240, 3,770, 3,770, 3,770, 3,770) = 0.957 ≈ 0.96</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="60" left="36" top="1434" width="540" height="42" align-x="36" align-y="1476" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Reference result: IRassembly &lt; 1.0 — reported O.K. The clamp has 140 lb of nominal allowable-load margin. Confirm the exact component models, installation configuration, and current catalog allowables.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="61" left="36" top="1479" width="540" height="19" align-x="36" align-y="1498" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Heading 1" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">4.3 HSS cantilever bending</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="62" left="36" top="1501" width="540" height="14" align-x="36" align-y="1515" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Applied moment at the HSS:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="63" left="36" top="1518" width="540" height="14" align-x="36" align-y="1532" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Mz = P × L = 3.1 kip × 14 in = 43.4 kip-in</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="64" left="36" top="1535" width="540" height="14" align-x="36" align-y="1549" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Maximum bending stress:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="65" left="36" top="1552" width="540" height="14" align-x="36" align-y="1566" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">fb = Mz / S = 43.4 kip-in / 5.97 in³ = 7.27 ksi</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="66" left="36" top="1569" width="540" height="14" align-x="36" align-y="1583" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Allowable bending stress used in the reference:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="67" left="36" top="1586" width="540" height="14" align-x="36" align-y="1600" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fb,allow = 0.6 × Fy = 0.6 × 46 ksi = 27.6 ksi</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="68" left="36" top="1603" width="540" height="14" align-x="36" align-y="1617" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Bending interaction ratio:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="69" left="36" top="1620" width="540" height="14" align-x="36" align-y="1634" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">IRbending = fb / Fb,allow = 7.27 / 27.6 = 0.264 ≈ 0.26</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="70" left="36" top="1637" width="540" height="14" align-x="36" align-y="1651" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Reference result: IRbending &lt; 1.0 — reported O.K.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="71" left="36" top="1654" width="540" height="56" align-x="36" align-y="1710" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">The reference calculation states that shear is not governing but the supplied excerpt does not show a numeric shear ratio. It also states that vertical deflection was evaluated; the numeric deflection and acceptance limit are not visible in the supplied excerpts and require confirmation in the complete calculation.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="72" left="36" top="1713" width="540" height="19" align-x="36" align-y="1732" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Heading 1" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">4.4 HSS-to-W8 weld</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="73" left="36" top="1735" width="540" height="28" align-x="36" align-y="1763" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">The reference checks the all-around 1/4 in fillet weld for combined direct shear and bending:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="74" left="36" top="1766" width="540" height="14" align-x="36" align-y="1780" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Quantity    |    Reference value</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="75" left="36" top="1783" width="540" height="14" align-x="36" align-y="1797" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Weld-group length, Lw    |    14.3 in</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="76" left="36" top="1800" width="540" height="14" align-x="36" align-y="1814" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Weld-group section modulus, Sw    |    17.4 in³</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="77" left="36" top="1817" width="540" height="14" align-x="36" align-y="1831" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Weld force per unit length, X direction    |    2.49 kip/in</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="78" left="36" top="1834" width="540" height="14" align-x="36" align-y="1848" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Weld force per unit length, Y direction    |    0.22 kip/in</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="79" left="36" top="1851" width="540" height="14" align-x="36" align-y="1865" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Combined applied weld force per unit length    |    2.50 kip/in</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="80" left="36" top="1868" width="540" height="14" align-x="36" align-y="1882" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Allowable E70XX weld force per unit length    |    3.71 kip/in</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="81" left="36" top="1885" width="540" height="14" align-x="36" align-y="1899" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Allowable base-metal force per unit length    |    5.76 kip/in</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="82" left="36" top="1902" width="540" height="14" align-x="36" align-y="1916" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">The governing allowable is the lesser of the weld-metal and base-metal values:</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="83" left="36" top="1919" width="540" height="14" align-x="36" align-y="1933" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">IRweld = 2.50 / min(3.71, 5.76) = 0.674 ≈ 0.67</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="84" left="36" top="1936" width="540" height="14" align-x="36" align-y="1950" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Reference result: IRweld &lt; 1.0 — reported O.K.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="85" left="36" top="1953" width="540" height="22" align-x="36" align-y="1975" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Subtitle" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">5. Summary of results</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="86" left="36" top="1978" width="540" height="14" align-x="36" align-y="1992" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Check    |    Demand / capacity result    |    Status in supplied reference</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="87" left="36" top="1995" width="540" height="28" align-x="36" align-y="2023" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Pipe-support assembly    |    Governing ratio = 0.96 (pipe clamp)    |    O.K.; least margin of the checks shown</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="88" left="36" top="2026" width="540" height="14" align-x="36" align-y="2040" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS cantilever bending    |    Ratio = 0.26    |    O.K.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="89" left="36" top="2043" width="540" height="14" align-x="36" align-y="2057" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS shear    |    Numeric ratio not shown    |    Stated non-governing</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="90" left="36" top="2060" width="540" height="28" align-x="36" align-y="2088" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS vertical deflection    |    Numeric result/limit not supplied    |    Confirmation required</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="91" left="36" top="2091" width="540" height="14" align-x="36" align-y="2105" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">HSS-to-W8 weld    |    Ratio = 0.67    |    O.K.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="92" left="36" top="2108" width="540" height="28" align-x="36" align-y="2136" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Baseplate and anchors    |    Appendix A analysis results not supplied    |    Not verified in this review</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="93" left="36" top="2139" width="540" height="28" align-x="36" align-y="2167" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Concrete anchorage and slab    |    Design inputs/results not supplied    |    Not verified in this review</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="94" left="36" top="2170" width="540" height="28" align-x="36" align-y="2198" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Required load combinations    |    Not established by supplied excerpts    |    Confirm against current procedures/piping analysis</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="95" left="36" top="2201" width="540" height="22" align-x="36" align-y="2223" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Subtitle" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">6. Conclusion</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="96" left="36" top="2226" width="540" height="56" align-x="36" align-y="2282" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">For the 3,100 lb vertical load and assumptions shown in the supplied reference calculation, the reported utilization ratios are 0.96 for the pipe-support assembly, 0.26 for HSS bending, and 0.67 for the HSS-to-W8 weld. These listed ratios are below 1.0; the pipe clamp is the governing listed component.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="97" left="36" top="2285" width="540" height="98" align-x="36" align-y="2383" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">This conclusion applies only to the checks and assumptions visible in the supplied excerpts. The reference calculation identifies baseplate/anchor results in Appendix A, but that appendix and the numeric deflection result were not provided. Therefore, this training review does not establish overall support adequacy or authorize design release or field use. Confirm the complete controlled calculation, anchor/baseplate/concrete checks, deflection, applicable load combinations, component ratings, and required qualified review before any engineering use.</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="98" left="36" top="2386" width="540" height="22" align-x="36" align-y="2408" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Subtitle" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">7. Training review record</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="99" left="36" top="2411" width="540" height="14" align-x="36" align-y="2425" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Role    |    Name    |    Date    |    Initials / comments</ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="100" left="36" top="2428" width="540" height="14" align-x="36" align-y="2442" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Trainee / preparer    |        |        |    </ws:p>
+      </ws:text>
+    </ws:region>
+    <ws:region region-id="101" left="36" top="2445" width="540" height="14" align-x="36" align-y="2459" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+      <ws:text use-page-width="false" push-down="false" lock-width="true">
+        <ws:p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Qualified reviewer / mentor    |        |        |    </ws:p>
+      </ws:text>
+    </ws:region>
+  </regions>
+</worksheet>
